@@ -16,7 +16,7 @@
 
 1. 克隆项目：
 ```bash
-git clone https://github.com/yourusername/AutoFileMover.git
+git clone https:\\github.com\techccy\AutoFileMover.git
 cd AutoFileMover
 ```
 
@@ -36,7 +36,7 @@ pipenv install
 
 ```yaml
 # 监听的目录路径
-watch_directory: "~/Downloads"
+watch_directory: "E:\Documents\Input"
 
 # 是否启用调试模式
 debug: false
@@ -49,12 +49,12 @@ integrity_check_delay: 2
 
 # 移动后的目标目录
 target_directories:
-  documents: "~/Documents/Organized/Documents"
-  images: "~/Documents/Organized/Images"
-  videos: "~/Documents/Organized/Videos"
-  music: "~/Documents/Organized/Music"
-  archives: "~/Documents/Organized/Archives"
-  others: "~/Documents/Organized/Others"
+  documents: "E:\Documents\Organized\Documents"
+  images: "E:\Documents\Organized\Images"
+  videos: "E:\Documents\Organized\Videos"
+  music: "E:\Documents\Organized\Music"
+  archives: "E:\Documents\Organized\Archives"
+  others: "E:\Documents\Organized\Others"
 
 # 文件分类规则
 rules:
@@ -126,7 +126,7 @@ python start.py
 ### 项目结构
 
 ```
-AutoFileMover/
+AutoFileMover\
 ├── start.py                  # 程序启动脚本
 ├── start.bat                 # Windows批处理启动文件
 ├── main.py                   # 主程序入口
@@ -193,7 +193,7 @@ pyinstaller --onefile --windowed ^
 
 将以下文件复制到目标计算机即可运行：
 
-1. `dist/AutoFileMover.exe` - 主程序
+1. `dist\AutoFileMover.exe` - 主程序
 2. `config.yaml` - 配置文件（可根据需要修改）
 3. `start.bat` - 启动脚本（可选）
 
