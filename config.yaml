@@ -1,0 +1,62 @@
+# AutoFileMover 配置文件
+
+# 监听的目录路径
+watch_directory: "~/Downloads/test"
+
+# 是否启用调试模式
+debug: false
+
+# 日志文件路径
+log_file: "autofilemover.log"
+
+# 文件完整性检查等待时间（秒）
+integrity_check_delay: 2
+
+# 移动后的目标目录
+target_directories:
+  documents: "~/Documents/test/Organized/Documents"
+  images: "~/Documents/test/Organized/Images"
+  videos: "~/Documents/test/Organized/Videos"
+  music: "~/Documents/test/Organized/Music"
+  archives: "~/Documents/test/Organized/Archives"
+  others: "~/Documents/test/Organized/Others"
+
+# 文件分类规则
+rules:
+  - name: "文档文件"
+    extensions: [".pdf", ".doc", ".docx", ".txt", ".xls", ".xlsx", ".ppt", ".pptx"]
+    target: "documents"
+    notify: true  # 对此类文件移动发送通知
+    
+  - name: "图片文件"
+    extensions: [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff", ".svg", ".webp"]
+    target: "images"
+    notify: true  # 对此类文件移动发送通知
+    
+  - name: "视频文件"
+    extensions: [".mp4", ".avi", ".mkv", ".mov", ".wmv", ".flv", ".webm"]
+    target: "videos"
+    notify: true  # 对此类文件移动发送通知
+    
+  - name: "音频文件"
+    extensions: [".mp3", ".wav", ".flac", ".aac", ".ogg", ".wma"]
+    target: "music"
+    notify: true  # 对此类文件移动发送通知
+    
+  - name: "压缩文件"
+    extensions: [".zip", ".rar", ".7z", ".tar", ".gz", ".bz2"]
+    target: "archives"
+    notify: true  # 对此类文件移动发送通知
+
+  - name: "可执行文件"
+    extensions: [".exe", ".msi", ".dmg", ".pkg", ".deb", ".rpm"]
+    target: "others"
+    notify: true  # 对此类文件移动发送通知
+    
+# 默认目标目录（未匹配任何规则的文件）
+default_target: "others"
+
+# 通知设置
+notifications:
+  enabled: true
+  sound: true

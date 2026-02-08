@@ -1,0 +1,8 @@
+# 核心依赖
+watchdog>=4.0.0
+PyYAML>=6.0.1
+pystray>=0.19.5
+Pillow>=10.2.0
+
+# 注意：tkinter是Python标准库的一部分，通常不需要额外安装
+# 如果在Windows上运行，确保安装了支持tkinter的Python发行版
