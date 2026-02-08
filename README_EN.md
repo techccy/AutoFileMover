@@ -1,5 +1,7 @@
 # AutoFileMover
 
+[「中文」](README.md)
+
 An automatic file transfer program designed specifically for Windows that monitors a specified directory and automatically classifies and moves files to designated folders based on rules after ensuring file download or transfer completion and file integrity.
 
 ## Features
